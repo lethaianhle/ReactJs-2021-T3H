@@ -1,0 +1,36 @@
+/* body {
+  background-color: lightblue;
+} */
+
+.login-container {
+  width: 400px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin: 200px auto;
+}
+
+.login-container form {
+  text-align: center;
+}
+
+.login-container .title {
+  font-weight: bold;
+  margin: 20px;
+  border-bottom: 1px gray solid;
+  padding: 5px;
+}
+
+.login-container input {
+  margin: 10px;
+  height: 20px;
+}
+
+.login-container .btn-submit {
+  margin: 20px;
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+}

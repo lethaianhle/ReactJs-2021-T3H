@@ -91,3 +91,15 @@ function reset(){
     document.getElementById("startStop").innerHTML = "Start";
 
 }
+
+function getRandom(max) {
+    return Math.floor(Math.random() * max) + 1;
+}
+let randomElem = document.getElementById("random");
+randomElem.innerHTML = getRandom(10);
+
+function getRandom2(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+let random2Elem = document.getElementById("random2");
+random2Elem.innerHTML = getRandom(10);

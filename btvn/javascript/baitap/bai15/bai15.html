@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15</title>
+</head>
+
+<body>
+    <h2>Viết chương trình chuẩn hóa họ tên!</h2>
+    <label for="">Enter Input: </label>
+    <input type="text" id="inputStr">
+    <br>
+    <br>
+    <button onclick="standard()">Submit</button>
+    <p id="display" style="color: red;"></p>
+
+    <script>
+        function standard() {
+            let inputStr = document.getElementById("inputStr").value;
+            let display = document.getElementById("display");
+            let str = inputStr.toLowerCase().split(" ");
+            console.log(str);
+            for (let i = 0; i < str.length; i++) {
+                str[i] = str[i].replace(`${str[i].charAt(0)}`, `${str[i].charAt(0).toUpperCase()}`)
+                console.log(str[i]);
+                console.log(str[i].charAt(0));
+                console.log(str[i].charAt(0).toUpperCase());
+            }
+            console.log(str);
+            display.innerHTML = `Chuỗi được chuẩn hóa là: ` + str.join(" ");
+        }
+    </script>
+</body>
+
+</html>

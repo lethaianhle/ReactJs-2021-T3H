@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+
+<body>
+    <h2>Đếm số khoảng trắng trong chuỗi</h2>
+    <label for="">Enter Input: </label>
+    <input type="text" id='inputStr'>
+    <br>
+    <br>
+    <button onclick="calc()">Submit</button>
+    <p id="display" style="color: red;"></p>
+    <script>
+        function calc() {
+            let count = 0;
+            let inputStr = document.getElementById('inputStr').value;
+            let display = document.getElementById('display');
+            str = inputStr.split('');
+            console.log(str)
+
+            for (let i = 0; i <= str.length - 1; i++) {
+                if (str[i] == ' ') {
+                    count += 1;
+                }
+            }
+
+            display.innerHTML = `Số khoảng trắng trong chuỗi là: ${count}`;
+        }
+    </script>
+</body>
+
+</html>

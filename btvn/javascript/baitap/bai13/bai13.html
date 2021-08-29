@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 13</title>
+</head>
+
+<body>
+    <h2>Viết chương trình đảo ngược chuỗi nhâp vào@</h2>
+    <label for="">Enter Input: </label>
+    <input type="text" id='inputStr'>
+    <br>
+    <br>
+    <button onclick="calc()">Submit</button>
+    <p id="display" style="color: red;"></p>
+    <script>
+        function calc() {
+            let reseverStr = [];
+            let inputStr = document.getElementById('inputStr').value;
+            let display = document.getElementById('display');
+            str = inputStr.split('');
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                reseverStr.push(str[i]);
+            }
+
+            display.innerHTML = "Chuỗi đã đảo ngược: " + reseverStr.join("");
+        }
+    </script>
+</body>
+
+</html>

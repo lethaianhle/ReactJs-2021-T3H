@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <h2>Tính tổng bình phương các số từ 1 đến n!</h2>
+    <label for="">Enter Input: </label>
+    <input type="text" id="inputNumber">
+    <br>
+    <br>
+    <button onclick="calc()">Tính</button>
+    <h4 id="display" style="color: red;"></h4>
+    <script>
+        function calc() {
+            let inputNumber = Number(document.getElementById('inputNumber').value);
+
+            let display = document.getElementById('display');
+
+            let sum = 0;
+
+            if (isNaN(inputNumber) || inputNumber < 1) {
+                display.innerHTML = "Dữ liệu nhập vào sai!"
+            } else {
+                for (let i = 1; i <= inputNumber; i++) {
+                    sum = sum + (i * i);
+                }
+                display.innerHTML = `Tổng các số từ 1 đến n là: ${sum}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

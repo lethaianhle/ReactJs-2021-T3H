@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+
+<body>
+    <h2>In bảng cửu chương ra màn hình</h2>
+    <button onclick="println()">Print</button>
+    <br>
+    <p id="display"></p>
+    <script>
+        function println() {
+            let display = document.getElementById('display');
+
+            document.write("Bảng cửu chương: ");
+            for (let i = 0; i <= 10; i++) {
+                for (let j = 0; j <= 10; j++) {
+                    document.write(`<p> ${i} x ${j} = ${i * j} </p>`);
+                    if (j == 10) {
+                        document.write("---");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 14</title>
+</head>
+
+<body>
+    <h2>Nhập vào chuỗi s1 và s2, cho biết vị trí xuất hiện của chuỗi s2 trong s1!</h2>
+    <label for="">Enter s1: </label>
+    <input type="text" id="s1">
+    <br>
+    <br>
+    <label for="">Enter s2: </label>
+    <input type="text" id="s2">
+    <br>
+    <br>
+    <button onclick="check()">Submit</button>
+    <p id="display" style="color: red;"></p>
+    <script>
+        function check() {
+            let display = document.getElementById("display");
+            let s1 = document.getElementById("s1").value;
+            let s2 = document.getElementById("s2").value;
+            let poi = s1.indexOf(`${s2}`);
+
+            if (poi === -1) {
+                display.innerHTML = `s2 không nằm trong s1`;
+            } else {
+                display.innerHTML = `Vị trí của s2 trong s1 là: ${poi}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

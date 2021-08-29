@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <h2>In ra các số từ 1 đến 10!</h2>
+    <button onclick="println()">Print</button>
+    <h3 id="display" style="color: red;"></h3>
+    <script>
+        function println() {
+            let display = document.getElementById("display");
+
+            let a = [];
+
+            for(let i = 1 ; i <= 10; i++){
+                a.push(i);
+            }
+
+            display.innerText = (a.join(" "));
+        }
+    </script>
+</body>
+</html>

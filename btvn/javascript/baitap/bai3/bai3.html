@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <h2>In ra các số chẵn từ 1 đến n!</h2>
+    <label for="">Enter Input: </label>
+    <input type="text" id="inputNumber">
+    <br>
+    <br>
+    <button onclick="println()">Print</button>
+    <h4 id="display" style="color: red;"></h4>
+    <script>
+        function println() {
+            let display = document.getElementById("display");
+
+            let inputNumber = Number(document.getElementById("inputNumber").value);
+
+            let a = [];
+
+            if(isNaN(inputNumber) || inputNumber <= 1){
+                display.innerText = "Dữ liệu nhập vào sai!"
+            } else if(inputNumber > 1){
+                for (let i = 1; i <= inputNumber; i++) {
+                    if(i % 2 === 0){
+                        a.push(i);
+                    }
+                }
+                display.innerText = a.join(" ");
+            }
+        }
+    </script>
+</body>
+</html>
